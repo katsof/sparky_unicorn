@@ -1,0 +1,196 @@
+
+
+#articles-container {
+    display: flex; /* Use flexbox to align child items */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: flex-start; /* Align children to the start of the container */
+    min-height: 300px; 
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden; 
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+.article-card {
+    z-index: 2;
+    width: 100%; /* Take the full width of the container */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    background-color: #333; /* Dark but distinct from the background */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px; /* Add space between cards */
+}
+
+.article-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.article-description {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #3B3B3B ; /* dark background for trendy look */
+    color: #ffffff; /* light text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3B3B3B; /* slightly lighter dark shade for header */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid  #FAFAFA; /* a pop of color for branding */
+}
+
+h1 {
+    font-size: 30px; /* larger font size for impact */
+    font-weight: 700; /* bold weight for title */
+    margin: 0;
+    position: relative;
+    display: inline-block; /* allows for pseudo elements to be positioned absolutely */
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 3px;
+    background-color: #FAFAFA ; /* branding color */
+    border-radius: 2px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 3px;
+    background-color: #FAFAFA;  /* branding color */
+    border-radius: 2px;
+}
+
+/* Styling the buttons to look more modern and edgy */
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px; /* rounded buttons */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+    background-color: #2c3e50; /* muted color for a modern look */
+    color: #ecf0f1;
+}
+
+.btn.agree {
+    box-shadow: inset 0 0 0 2px #27AE60; /* Use inset border for a cleaner look */
+}
+
+.btn.disagree {
+    box-shadow: inset 0 0 0 2px #C0392B ;
+}
+
+.btn:hover {
+    background-color: #34495e; /* slightly darker on hover for better UX */
+    color: #fff;
+}
+
+/* Subtle hover effect for article cards */
+.article-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional imagery for articles */
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* rounded top corners */
+    margin-bottom: 15px;
+}
+
+/* Enhanced Read more link */
+.read-more {
+    /* ... existing properties ... */
+    font-weight: bold;
+    background-color: #FAFAFA;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none; /* remove underline */
+    display: inline-block; /* allow padding and background color */
+}
+
+.read-more:hover {
+    background-color: #FAFAFA ;
+    color: #fff;
+    text-decoration: none; /* ensure no underline on hover */
+}
+
+/* Add additional styles for trending and debate sections with the new theme */
+#trending-section h2,
+#debate-section h2 {
+    color: #FAFAFA; ; /* use the branding color for headers */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9B59B6 ; /* underline effect for headers */
+}
+
+/* More style adjustments for input fields and forms */
+input[type="text"] {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: calc(100% - 24px); /* subtract padding */
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #9B59B6 ;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #9B59B6  /* darker shade on hover */
+}
+
+/* Classes for swiping animation */
+.swipe-left {
+    transform: translateX(-100%) rotate(-20deg); /* Move to the left and rotate */
+    opacity: 0; /* Fade out */
+}
+
+.swipe-right {
+    transform: translateX(100%) rotate(20deg); /* Move to the right and rotate */
+    opacity: 0; /* Fade out */
+}
+
+
+
+
